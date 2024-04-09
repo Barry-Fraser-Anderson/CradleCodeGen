@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form {
+  padding: 5px;
+  background-color: antiquewhite;
+}
+
+img {
+  margin-right: 10px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+}
+
+.row-container {
+  padding: 5px;
+  margin: 5px;
+}
+
+.row-header {
+  font-weight: bold;
+}
+
+.number3 {
+  width: 3em;
+}
+
+.number4 {
+  width: 4em;
+}
+
+.system {
+  background-color: burlywood;
+}
+
+.licences {
+  background-color: lightblue;
+}
+
+.lics-and-tokens {
+  display: grid;
+  row-gap: 5px;
+  margin-top: 10px;
+}
+
+.connections {
+  background-color: aquamarine;
+}
+
+.modules {
+  background-color: lightseagreen;
+}
+
+.dates {
+  background-color: lightgreen;
+}
+
+.error-text {
+  background: #f54242;
+  color: #fff;
+  font-weight: bold;
+}
+
+.container-word-break {
+  height: 4em;
+  border-radius: 5px;
+  background-color: darksalmon;
+  word-break: break-all;
+}
+
+.inline {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* This must be placed after '.inline' */
+.hidden {
+  display: none;
+}
+
+#apply {
+  padding: 5px;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Security Code Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <form class="form" autocomplete="off">
+    <div class="row-container title-row">
+      <img src="3sl_large.png" alt="3SL logo" />
+      <h1>CRADLE Security Code Generator</h1>
+    </div>
+
+    <!-- Host details -->
+    <div class="system row-container">
+      <div class="inline">
+        <label for="version">Version</label>
+        <select id="version">
+          <option value="7.0">7.0</option>
+          <option value="7.1">7.1</option>
+          <option value="7.2">7.2</option>
+          <option value="7.3">7.3</option>
+          <option value="7.4">7.4</option>
+          <option value="7.5">7.5</option>
+          <option value="7.6">7.6</option>
+          <option value="7.7">7.7</option>
+          <option value="8.0" selected>8.0</option>
+        </select>
+      </div>
+
+      <div class="inline">
+        <label for="seqNo" title="1 to 9999">Sequence</label>
+        <input class="number4" id="seqNo" type="number" value="8888" min="1" max="9999" />
+      </div>
+
+      <div class="inline">
+        <label for="arch">Hardware Type</label>
+        <select id="arch">
+          <option value="windows">Windows</option>
+          <option value="linux">Linux</option>
+        </select>
+      </div>
+
+      <div class="inline">
+        <label for="hostID">Host ID</label>
+        <input id="hostID" type="text" placeholder="a1b2c3d4" size="8" maxlength="8" required />
+      </div>
+    </div>
+
+    <!-- Licences -->
+    <section class="licences row-container">
+      <h4>Licences</h4>
+      <select id="mode-select">
+        <option value="custom" selected>custom</option>
+        <option value="EVALUATION">EVALUATION</option>
+        <option value="RM-DESKTOP">RM-DESKTOP</option>
+        <option value="RM-PRO">RM-PRO</option>
+        <option value="SE-DESKTOP">SE-DESKTOP</option>
+        <option value="SE-PRO">SE-PRO</option>
+      </select>
+
+      <div class="lics-and-tokens">
+        <div class="flags">
+          <div class="inline">
+            <input class="input-lic" id="lic-OO" type="checkbox" data-licence="OO" />
+            <label for="lic-OO">OO</label>
+          </div>
+          <div class="inline">
+            <input class="input-lic" id="lic-FAD" type="checkbox" data-licence="FAD" />
+            <label for="lic-FAD">FAD</label>
+          </div>
+          <div class="inline">
+            <input class="input-lic" id="lic-SYSML" type="checkbox" data-licence="SYSML" />
+            <label for="lic-SYSML">SysML</label>
+          </div>
+          <div class="inline">
+            <input class="input-lic" id="lic-SGL" type="checkbox" data-licence="SINGLE" />
+            <label for="lic-SGL">SINGLE</label>
+          </div>
+        </div>
+
+        <div class="counters">
+          <div class="inline">
+            <label for="lic-REQ">REQ</label>
+            <input class="input-lic" id="lic-REQ" type="text" value="0" size="2" data-licence="REQ" />
+          </div>
+
+          <div class="inline">
+            <label for="lic-SYS">SYS</label>
+            <input class="input-lic" id="lic-SYS" type="text" value="0" size="2" data-licence="SYS" />
+          </div>
+
+          <div class="inline">
+            <label for="lic-SWE">SWE</label>
+            <input class="input-lic" id="lic-SWE" type="text" value="0" size="2" data-licence="SWE" />
+          </div>
+
+          <div class="inline">
+            <label for="lic-MET">MET</label>
+            <input class="input-lic" id="lic-MET" type="text" value="0" size="2" data-licence="MET" />
+          </div>
+
+          <div class="inline">
+            <label for="lic-WEBA">WEBA</label>
+            <input class="input-lic" id="lic-WEBA" type="text" value="0" size="2" data-licence="WEBA" />
+          </div>
+
+          <div class="inline">
+            <label for="lic-WEBP">WEBP</label>
+            <input class="input-lic" id="lic-WEBP" type="text" value="0" size="2" data-licence="WEBP" />
+          </div>
+
+          <div class="inline">
+            <label for="lic-DOC">DOC </label>
+            <input class="input-lic" id="lic-DOC" type="text" value="0" size="2" data-licence="DOC" />
+          </div>
+
+          <div class="inline">
+            <label for="lic-PERF">PERF</label>
+            <input class="input-lic" id="lic-PERF" type="text" value="0" size="2" data-licence="PERF" />
+          </div>
+
+          <div class="inline">
+            <label for="lic-DASH">DASH</label>
+            <input class="input-lic" id="lic-DASH" type="text" value="0" size="2" data-licence="DASH" />
+          </div>
+
+          <div class="inline">
+            <label for="lic-RISK">RISK</label>
+            <input class="input-lic" id="lic-RISK" type="text" value="0" size="2" data-licence="RISK" />
+          </div>
+
+          <div class="inline">
+            <label for="lic-TEST">TEST</label>
+            <input class="input-lic" id="lic-TEST" type="text" value="0" size="2" data-licence="TEST" />
+          </div>
+
+          <label class="inline" for="lic-ODBC">
+            ODBC
+            <select class="input-lic" id="lic-ODBC" data-licence="ODBC">
+              <option value="0" selected>none</option>
+              <option value="1">Oracle</option>
+              <option value="2">MySQL</option>
+              <option value="3">both</option>
+            </select>
+          </label>
+        </div>
+
+        <div>
+          <div class="inline">
+            <label for="tokens">Tokens</label>
+            <input class="number3" id="tokens" type="number" value="0" min="0" max="999" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connections -->
+    <section class="connections row-container">
+      <h4>Connections</h4>
+      <div class="inline">
+        <label for="conn-RW">RW</label>
+        <input class="input-conn number3" id="conn-RW" type="number" value="2" min="0" max="250" data-conn="RW" />
+      </div>
+      <div class="inline">
+        <label for="conn-RO">RO</label>
+        <input class="input-conn number3" id="conn-RO" type="number" value="2" min="0" max="250" data-conn="RO" />
+      </div>
+      <div class="inline">
+        <label for="conn-API">API</label>
+        <input class="input-conn number3" id="conn-API" type="number" value="2" min="0" max="250" data-conn="API" />
+      </div>
+      <div class="inline">
+        <label for="conn-NU">NU</label>
+        <input class="input-conn number3" id="conn-NU" type="number" value="0" min="0" max="250" data-conn="NU" />
+      </div>
+      </fieldset>
+    </section>
+
+    <!-- Dates -->
+    <section class="dates row-container">
+      <h4>Dates</h4>
+      <label class="inline" for="startDate">
+        Start Date
+        <input class="date" type="date" id="startDate" />
+      </label>
+      <div class="inline">
+        <label for="duration-amount">Duration</label>
+        <input id="duration-amount" type="number" class="number3" value="14" min="1">
+        <select id="duration-unit">
+          <option value="years">years</option>
+          <option value="months">months</option>
+          <option value="days" selected>days</option>
+        </select>
+      </div>
+      <label class="inline" for="endDate">
+        End Date
+        <input class="date" type="date" id="endDate" />
+      </label>
+    </section>
+
+    <div class="row-container">
+      <input type="submit" id="apply" value="Apply" />
+      <label class="error-text" id="message"></label>
+    </div>
+
+    <div class="container-word-break row-container" id="sec_str"></div>
+  </form>
+
+  <script defer src="script.js"></script>
+</body>
+
+</html>
