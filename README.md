@@ -1,13 +1,16 @@
 # CradleCodeGen
-An HTML form to generate input for the Cradle security code generator. 
-It was written a long time ago as an exercise.
 
-The 'Licenses' section is reconfigured by the JavaScript, dependent on input selections.
+# Synopsis
+An HTML form to generate input for the Cradle security code generator. 
+It was written a long time ago as an exercise, and for my personal use.
+
+The available licenses in the 'Licenses' section are reconfigured by the JavaScript dependent on the Cradle version selected.
 
 A lot of input validation is performed by the JavaScript and an error message is displayed as appropriate when 'Apply' is pressed.
 
-If successful, the output string displayed could be used as input to the Cradle codegen executable.
+If successful, the output string displayed is used as input to the Cradle codegen executable.
 
+# Example screens
 An error message:
 ![errors](https://github.com/Barry-Fraser-Anderson/CradleCodeGen/assets/112425916/9adab3fb-8fb7-4ef1-ac20-8bfd17f09cc9)
 
